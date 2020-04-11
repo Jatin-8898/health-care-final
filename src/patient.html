@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EMR Dapp</title>
+    <title>Essential HealthCare</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/png">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +18,10 @@
 
     <!-- Custom CSS -->
     <style>
-    body {
-        /* padding-top: 70px; */
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    body{
+        /*background: linear-gradient(to right, #e52d27,#b31217);*/
+         /* background-color: #EA384D; */
+         background-color:#f64f59;
     }
     .navbar{
         margin-bottom: 70px;
@@ -96,7 +98,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">EMR Dapp</a>
+                    <a class="navbar-brand" href="#">Essential HealthCare</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -112,7 +114,7 @@
         </nav>
 
         <div class="container">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="text-center">Personal Information</h3>
                 </div>
@@ -132,7 +134,7 @@
                             
                             <div class="text-center">
                                     <h5>Your records are stored here: http://localhost:8080/ipfs/<span id="recordsHash"></span></h5>
-                                <button type="submit" class="btn btn-info btn-lg" onclick="showRecords(this)">View medical records</button>
+                                <button type="submit" class="btn btn-success btn-lg" onclick="showRecords(this)">View medical records</button>
                                 
                             </div>
                             <pre id="records" style="margin-top: 20px;">
@@ -145,7 +147,7 @@
                 </div>
             </div>
             
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="text-center">Share your Medical Record</h3>
                 </div>
@@ -189,7 +191,7 @@
                 </div>
             </div>
             
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="text-center">Current EMR access holders</h3>
                 </div>
@@ -201,7 +203,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-offset-1 col-sm-10">
-                            <table id="accessDoc" class="table table-hover">
+                            <table id="accessDoc" class="table table-striped table-hover">
                                 <tr>
                                     <th>Doctor</th>
                                     <th class="publicKeyDoctor">Public Key</th>
@@ -213,7 +215,7 @@
 
                 </div>
             </div>    
-            <div class="panel panel-default" id="insuranceInfo">
+            <div class="panel panel-info" id="insuranceInfo">
                 <div class="panel-heading">
                     <h3 class="text-center">Insurance provider</h3>
                 </div>
@@ -234,7 +236,7 @@
                     </div>
                 </div>
             </div>    
-            <div class="panel panel-default" id="buyInsurance">
+            <div class="panel panel-info" id="buyInsurance">
                 <div class="panel-heading">
                     <h3 class="text-center">Do you want to buy an Insurance policy?</h3>
                 </div>
@@ -291,7 +293,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-offset-4 col-sm-4 text-center">
-                            <button onclick = "buyInsurance()" class="btn btn-primary btn-lg">Buy</button>
+                            <button onclick = "buyInsurance()" class="btn btn-info btn-lg">Buy</button>
                         </div>
                     </div>
 
