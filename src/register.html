@@ -113,7 +113,7 @@
 
                     </form>
                     <div class="text-center">
-                        <button class="btn btn-primary btn-lg" onclick="addAgent()">Register</button>
+                        <button class="btn btn-success btn-lg" onclick="addAgent()">Register</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
         
         publicKey = $("#publicKey").val();
         publicKey = publicKey.toLowerCase();
-        // console.log(publicKey);
+        console.log(publicKey);
 
         var validPublicKey = true;
         var validAgent = true;
@@ -178,7 +178,7 @@
 
         if (validPublicKey == false) {
             $(".alert-warning").show();
-            // console.log("bye");
+            console.log("Invlaid Public key");
         }
         else{
             for(j = 0; j < PatientList.length; j++) {
@@ -205,10 +205,9 @@
 
                 if (designation == "0") {
                     var reportTitle = 
-`Name: ${name}
-Public Key: ${publicKey}
-                            
-`;
+                        `Name: ${name}
+                        Public Key: ${publicKey}                                                    
+                        `;  
                     var buffer = Buffer(reportTitle);
                     
                     ipfs.files.add(buffer, (error, result) => {
@@ -229,7 +228,7 @@ Public Key: ${publicKey}
                 }else{
                     contractInstance.add_agent(name, age, designation, ipfshash, {gas: 1000000}, (err, res) => {
                     if (!err) {
-                        // console.log(res);
+                         console.log(res);
                         if (designation == "1") {
                             location.replace("./doctor.html?key="+publicKey);
                         } else if (designation == "2"){
